@@ -33,9 +33,26 @@ export default function Home() {
         TIC<span className="text-amber-400">·</span>TAC
         <span className="text-amber-400">·</span>TOE
       </h1>
-      <Scoreboard scores={scores} draws={draws} currentPlayer={currentPlayer} status={status} />
-      <Board board={board} currentPlayer={currentPlayer} winningLine={winningLine} status={status} onCellClick={handleCellClick} />
-      <StatusBar status={status} currentPlayer={currentPlayer} winner={winner} onRestart={restartGame} onReset={resetAll} />
+      <Scoreboard
+        scores={scores}
+        draws={draws}
+        currentPlayer={currentPlayer}
+        status={status}
+      />
+      <Board
+        board={board}
+        currentPlayer={currentPlayer}
+        winningLine={winningLine}
+        status={status}
+        onCellClick={handleCellClick}
+      />
+      <StatusBar
+        status={status}
+        currentPlayer={currentPlayer}
+        winner={winner}
+        onRestart={restartGame}
+        onReset={resetAll}
+      />
     </main>
   );
 }

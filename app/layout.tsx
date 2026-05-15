@@ -1,18 +1,19 @@
-import { ReactNode } from "react";
+import type { Metadata } from "next";
+import "./globals.css";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "crossly",
-  description: "A short description of your site",
+  description: "a dope off tictactoe",
   openGraph: {
-    title: "Crossly",
-    description: "A short description of your site",
-    url: "https://crossly.netlify.app/",
+    title: "crossly",
+    description: "A classic game, refactored with Next.js",
+    url: "https://crossly.netlify.app",
     images: [
       {
         url: "https://crossly.netlify.app/coverimage.png",
         width: 1200,
         height: 630,
-        alt: "Your Site Name",
+        alt: "Tic·Tac·Toe",
       },
     ],
   },
@@ -22,7 +23,11 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body>{children}</body>
